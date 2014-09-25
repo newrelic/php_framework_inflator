@@ -57,8 +57,8 @@ PHP=/etc/alternatives/php  # probably zend
 
 #
 # ROOT_DIR is the file system path to the root of the served directory
-# I (rrh) haven't had much success with stock LAMP+hhvm using anything
-# other than /var/www
+# TODO (24Sep2014): we haven't had much success with stock LAMP+hhvm using anything
+# other than /var/www, but we haven't tried much.
 #
 if [ -e /var/www ] ; then
   ROOT_DIR=/var/www
