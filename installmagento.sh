@@ -137,8 +137,8 @@ do_install_magento() {
   if [ ! -e Yireo_NewRelic-1.2.1.tgz ] ; then
     if false ; then
       #
-      # 1.2.1 released on 11Mar2014, but it isn't installed as a sibling to 1.2.0
-      # Robert got it another way.  Diffing, the only difference between 1.2.0 and 1.2.1 is
+      # Yireo 1.2.1 released on 11Mar2014, but it isn't installed as a sibling to 1.2.0
+      # Diffing, the only difference between 1.2.0 and 1.2.1 is
       # the change of license from OSL to BSD.
       #
       echo "wget magento yireo 1.2.1 extension"
