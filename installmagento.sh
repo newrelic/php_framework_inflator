@@ -88,12 +88,8 @@ done
 #   http://www.magentocommerce.com/wiki/1_-_installation_and_configuration/installing_magento_via_shell_ssh#installing_magento_with_the_full_download_sample_data
 #
 
-if [ "${do_stock_lamp}" == "yes" ] ; then
-  INSTALL_DIR=/var/www/frameworks
-  URL_PATH="localhost:80/frameworks/"
-else
-  INSTALL_DIR=/opt/nr/htdocs/frameworks
-  URL_PATH="localhost:9090/frameworks/"
+INSTALL_DIR=/var/www/frameworks
+URL_PATH="localhost:80/frameworks/"
 fi
 if [ ! -e ${INSTALL_DIR} ] ; then
   mkdir -p ${INSTALL_DIR}

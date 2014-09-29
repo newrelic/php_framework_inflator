@@ -44,13 +44,8 @@
 set -e  # stop on first error
 set -u  # undefined variable refs are an error
 
-LAMPBIN=/opt/nr/lamp/bin
-# export PATH=${LAMPBIN}:${PATH}
-
-MYSQL=${LAMPBIN}/mysql
 MYSQL=/usr/bin/mysql
 
-PHP=${LAMPBIN}/php
 PHP=/usr/bin/php  # may be either hhvm or zend
 PHP=/usr/bin/php5  # almost surely zend
 PHP=/etc/alternatives/php  # probably zend
@@ -62,14 +57,13 @@ PHP=/etc/alternatives/php  # probably zend
 #
 if [ -e /var/www ] ; then
   ROOT_DIR=/var/www
-elif [ -e /opt/nr/htdocs ] ; then
-  ROOT_DIR=/opt/nr/htdocs
 else
+  ROOT_DIR=/var/www
   echo can not find a plausible www root directory
 fi
 
 #
-# Hiphop apparently has a bug regarding timeouts,
+# HHVM apparently has a bug regarding timeouts,
 # that impacts its ability to bootstrap composer.
 #
 # for a recipe on making the HHVM php tolerate timeouts, see:
