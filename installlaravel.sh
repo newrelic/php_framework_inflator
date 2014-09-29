@@ -83,7 +83,7 @@ do_yireo=no
 
 do_laravel40=no
 do_laravel41=no
-port=9090      # for nrlamp; use port=80 for regular lamp
+port=80
 
 while [ $# -gt 0 ]; do
   case "$1" in

@@ -42,8 +42,6 @@
 set -e
 set -u
 
-do_stock_lamp=yes
-
 do_force=no    # overwrite an existing installation
 do_install=no  # Run the magento installation script
 do_yireo=no
@@ -55,9 +53,6 @@ do_magento20=no  # not fully implemented
 
 while [ $# -gt 0 ]; do
   case "$1" in
-    --nrlamp|--do_nrlamp)
-      do_stock_lamp=no
-      ;;
     --force|--do_force)
       do_force=yes
       ;;
